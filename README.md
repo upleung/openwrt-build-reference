@@ -8,7 +8,7 @@
 
 ---
 
-## 📘 About
+## 📘 About This Project
 
 **openwrt-build-reference** 是一个面向多硬件路由器的 **OpenWrt 编译引用库（Reference Library）**，用于集中存放构建固件所需的：
 
@@ -31,9 +31,79 @@
 
 ---
 
+## 🔧 Included Tools & References
+
+本仓库将长期维护以下内容：
+
+### **📌 固件构建工具**
+- AmlImg（OneCloud 烧录工具）
+- u-boot（各硬件型号）
+- 打包工具（img、ext4、sparse 等）
+- 编译依赖（android-sdk-libsparse-utils 等）
+
+### **📌 上游源码镜像**
+- amlogic / meson8b（OneCloud）
+- bcm53xx（R7000）
+- mt7621 / mt7620 / mt7628（JCG Q20 / K2 / 小米 4A）
+- ipq40xx（中兴 E2633）
+- x86-64（通用）
+
+### **📌 补丁与 DTS 文件**
+- 各硬件专用 DTS
+- 内核补丁
+- OpenWrt target 补丁
+- 自定义构建脚本
+
+---
+
+## 🚀 Usage
+
+你可以在自己的 OpenWrt 构建脚本中引用本仓库，例如：
+
+```bash
+git clone https://github.com/upleung/openwrt-build-reference.git reference
+
+# 引用 OneCloud amlogic target
+rm -rf openwrt/target/linux/amlogic
+cp -r reference/onecloud/amlogic-meson8b openwrt/target/linux/amlogic
+
+# 引用 AmlImg 工具
+cp reference/common-tools/AmlImg/AmlImg ./AmlImg
+chmod +x ./AmlImg
+```
+
+---
+
+## 🤝 Contribution
+
+欢迎提交：
+
+- 新硬件资料
+- 构建工具
+- 补丁
+- 上游镜像
+- 编译脚本
+
+---
+
+## ⭐ Why This Repository Exists
+
+为了避免：
+
+- 上游仓库被删除  
+- 仓库变为私有  
+- 构建脚本拉取不到依赖  
+- 固件编译失败  
+- 多硬件资料分散难以维护  
+
+本仓库将作为 **长期稳定的引用源**，为多硬件 OpenWrt 构建提供可靠支持。
+
+
+---
+
 ## 📁 Repository Structure
 
-建议的目录结构如下（已根据你的设备列表设计）：
+目录结构如下：
 
 ```
 openwrt-build-reference/
@@ -83,78 +153,5 @@ openwrt-build-reference/
 
 ---
 
-## 🔧 Included Tools & References
-
-本仓库将长期维护以下内容：
-
-### **📌 固件构建工具**
-- AmlImg（OneCloud 烧录工具）
-- u-boot（各硬件型号）
-- 打包工具（img、ext4、sparse 等）
-- 编译依赖（android-sdk-libsparse-utils 等）
-
-### **📌 上游源码镜像**
-- amlogic / meson8b（OneCloud）
-- bcm53xx（R7000）
-- mt7621 / mt7620 / mt7628（JCG Q20 / K2 / 小米 4A）
-- ipq40xx（中兴 E2633）
-- x86-64（通用）
-
-### **📌 补丁与 DTS 文件**
-- 各硬件专用 DTS
-- 内核补丁
-- OpenWrt target 补丁
-- 自定义构建脚本
-
----
-
-## 🚀 Usage
-
-你可以在自己的 OpenWrt 构建脚本中引用本仓库，例如：
-
-```bash
-git clone https://github.com/upleung/openwrt-build-reference.git reference
-
-# 引用 OneCloud amlogic target
-rm -rf openwrt/target/linux/amlogic
-cp -r reference/onecloud/amlogic-meson8b openwrt/target/linux/amlogic
-
-# 引用 AmlImg 工具
-cp reference/common-tools/AmlImg/AmlImg ./AmlImg
-chmod +x ./AmlImg
-```
-
----
-
-
 ## 📄 License
-
-本仓库采用 **MIT License**，允许自由使用、修改与分发。
-
----
-
-## 🤝 Contribution
-
-欢迎提交：
-
-- 新硬件资料
-- 构建工具
-- 补丁
-- 上游镜像
-- 编译脚本
-
----
-
-## ⭐ Why This Repository Exists
-
-为了避免：
-
-- 上游仓库被删除  
-- 仓库变为私有  
-- 构建脚本拉取不到依赖  
-- 固件编译失败  
-- 多硬件资料分散难以维护  
-
-本仓库将作为 **长期稳定的引用源**，为多硬件 OpenWrt 构建提供可靠支持。
-
----
+本仓库采用 MIT License，允许自由使用、修改与分发。
