@@ -108,47 +108,48 @@ chmod +x ./AmlImg
 ```
 openwrt-build-reference/
 │
-├── onecloud/
-│   ├── amlogic-meson8b/
-│   ├── uboot/
-│   ├── tools/
-│   └── patches/
+├── onecloud/                         # 玩客云（Amlogic S805 / Meson8b）专用资料
+│   ├── amlogic-meson8b/              # OneCloud 专用 target 源码、补丁
+│   ├── uboot/                        # OneCloud 专用 u-boot
+│   ├── tools/                        # OneCloud 专用工具（非通用）
+│   └── patches/                      # OneCloud 专用补丁
 │
-├── netgear-r7000/
-│   ├── bcm53xx/
-│   ├── patches/
-│   └── toolchain/
+├── netgear-r7000/                    # 网件 R7000（BCM53xx）专用资料
+│   ├── bcm53xx/                      # R7000 target 源码、补丁
+│   ├── patches/                      # R7000 专用补丁
+│   └── toolchain/                    # R7000 编译工具链
 │
-├── jcg-q20/
-│   ├── mt7621/
-│   ├── dts/
-│   └── patches/
+├── jcg-q20/                          # JCG Q20（MT7621）专用资料
+│   ├── mt7621/                       # MT7621 target 源码
+│   ├── dts/                          # Q20 专用 DTS
+│   └── patches/                      # Q20 专用补丁
 │
-├── xiaomi-4a/
-│   ├── mt7628/
-│   ├── uboot/
-│   └── patches/
+├── xiaomi-4a/                        # 小米路由器 4A（MT7628）专用资料
+│   ├── mt7628/                       # MT7628 target 源码
+│   ├── uboot/                        # 4A 专用 u-boot
+│   └── patches/                      # 4A 专用补丁
 │
-├── phicomm-k2/
-│   ├── mt7620/
-│   └── patches/
+├── phicomm-k2/                       # 斐讯 K2（MT7620）专用资料
+│   ├── mt7620/                       # MT7620 target 源码
+│   └── patches/                      # K2 专用补丁
 │
-├── zte-e2633/
-│   ├── ipq40xx/
-│   └── patches/
+├── zte-e2633/                        # 中兴 E2633（IPQ40xx）专用资料
+│   ├── ipq40xx/                      # IPQ40xx target 源码
+│   └── patches/                      # E2633 专用补丁
 │
-├── x86-64/
-│   ├── configs/
-│   └── tools/
+├── x86-64/                           # X86-64 通用资料
+│   ├── configs/                      # X86 构建配置
+│   └── tools/                        # X86 构建工具
 │
-├── common-tools/
-│   ├── AmlImg/
-│   ├── uboot/
-│   ├── sdk/
-│   ├── build-deps/
-│   └── scripts/
+├── common-tools/                     # 所有设备共享的通用工具库（重点）
+│   ├── AmlImg/                       # Amlogic 烧录工具（通用）
+│   ├── uboot/                        # 通用 u-boot 工具
+│   ├── sdk/                          # 通用 SDK
+│   ├── build-deps/                   # 通用构建依赖
+│   └── scripts/                      # 通用构建脚本
 │
-└── README.md
+└── README.md                         # 仓库说明文档
+
 ```
 
 ---
