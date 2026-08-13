@@ -1,16 +1,16 @@
-# openwrt-build-reference
+# Firmware-Build-Reference
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ![Status](https://img.shields.io/badge/Status-Active-blue.svg)
 ![Platform](https://img.shields.io/badge/Platform-Multi--Router-orange.svg)
 ![OpenWrt](https://img.shields.io/badge/OpenWrt-Reference%20Library-red.svg)
-![GitHub Repo Size](https://img.shields.io/github/repo-size/NetX/openwrt-build-reference.svg)
+![GitHub Repo Size](https://img.shields.io/github/repo-size/upleung/firmware-build-reference.svg)
 
 ---
 
 ## 📘 About This Project
 
-**openwrt-build-reference** 是一个面向多硬件路由器的 **OpenWrt 编译引用库（Reference Library）**，用于集中存放构建固件所需的：
+**Firmware-Build-Reference** 是一个面向多硬件路由器的 **OpenWrt 编译引用库（Reference Library）**，用于集中存放构建固件所需的：
 
 - 上游源码引用（防止仓库被删除或变为私有）
 - 固件构建工具（AmlImg、u-boot、打包工具等）
@@ -61,7 +61,7 @@
 你可以在自己的 OpenWrt 构建脚本中引用本仓库，例如：
 
 ```bash
-git clone https://github.com/upleung/openwrt-build-reference.git reference
+git clone https://github.com/upleung/firmware-build-reference.git reference
 
 # 引用 OneCloud amlogic target
 rm -rf openwrt/target/linux/amlogic
@@ -106,7 +106,7 @@ chmod +x ./AmlImg
 目录结构如下：
 
 ```
-openwrt-build-reference/
+Firmware-Build-Reference/
 │
 ├── onecloud/                         # 玩客云（Amlogic S805 / Meson8b）专用资料
 │   ├── amlogic-meson8b/              # OneCloud 专用 target 源码、补丁
